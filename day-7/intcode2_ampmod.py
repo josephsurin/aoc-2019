@@ -1,4 +1,5 @@
-# slightly modified from prev questions to allow for more programmability; inputs are taken as a list in the 2nd argument and outputs are returned as a list in the 2nd element of the return value list
+# modded version of intcode interpreter from day 5
+# takes input as a list and returns output as a list
 '''intcode machine interpreter
 takes a list of integers and returns the final state (as a list of integers) from the execution of the given input'''
 
@@ -38,8 +39,8 @@ def eval_param(I, param):
     if p == '0': return I[v]
 
 def execute(I, inps):
-    outputs = []
     inp_ctr = 0
+    outputs = []
     eip = 0
     op = I[eip] % 100
     while op != FIN_OP:
