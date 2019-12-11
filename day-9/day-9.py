@@ -12,4 +12,4 @@ print('part 1', S.get_state()['outputs'][0]) # 3598076521
 S = IntCode(I)
 S.inp([2])
 S.run()
-print('part 2', S.get_state()['outputs'][0]) # 3598076521
+print('part 2', S.get_state()['outputs'][0]) # 90722
