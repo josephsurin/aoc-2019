@@ -31,13 +31,12 @@ offset = int(inp[:7])
 inp = inp[offset:]
 def go_phase2(inp):
     inp = [int(x) for x in inp]
-    return ''.join(str(sum(inp[i:])%10) for i in range(len(inp)))
     o = ''
-    s = sum(inp)
-    o += str(s%10)
-    for x in inp:
-        o += str(abs(s-int(x))%10)
-    return o
+    s = 0
+    for i in range(len(inp)-1, 0, -1):
+        s += inp[i]
+        o += str(s%10)
+    return ''.join(reversed(o))
 
 for _ in range(100):
     inp = go_phase2(inp)
