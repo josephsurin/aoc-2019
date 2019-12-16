@@ -21,9 +21,9 @@ def go_phase1(inp):
             out += x*pattern[(p-i-1)%len(pattern)]
         o += str(abs(out)%10)
     return o
-for _ in range(100):
-    inp = go_phase1(inp)
-print('part 1', inp[:8])
+# for _ in range(100):
+#     inp = go_phase1(inp)
+# print('part 1', inp[:8])
 
 # part 2
 inp = open('input').read().strip()*10000
@@ -33,7 +33,7 @@ def go_phase2(inp):
     inp = [int(x) for x in inp]
     o = ''
     s = 0
-    for i in range(len(inp)-1, 0, -1):
+    for i in range(len(inp)-1, -1, -1):
         s += inp[i]
         o += str(s%10)
     return ''.join(reversed(o))
