@@ -23,7 +23,7 @@ def go_phase1(inp):
     return o
 # for _ in range(100):
 #     inp = go_phase1(inp)
-# print('part 1', inp[:8])
+# print('part 1', inp[:8]) # 40921727
 
 # part 2
 inp = open('input').read().strip()*10000
@@ -40,4 +40,4 @@ def go_phase2(inp):
 
 for _ in range(100):
     inp = go_phase2(inp)
-print('part 2', inp[:8])
+print('part 2', inp[:8]) # 89950138
